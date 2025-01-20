@@ -33,7 +33,8 @@ router.post("/register", async (req, res) => {
             httpOnly: true,
             secure: true,
             sameSite: 'none',
-            domain: 'scanfeast-backend.onrender.com', // 'qrmenuscan-backend.onrender.com'used this when the deploments is there // Match your backend domain
+            domain:'localhost',   //'qrmenuscan-backend.onrender.com', // Match your backend domain
+            // domain: 'scanfeast-backend.onrender.com',
             maxAge: 5 * 60 * 1000,
         }); // Cookie expires in 3 minutes
 
@@ -97,7 +98,8 @@ router.post("/verify-otp", async (req, res) => {
             httpOnly: true,
             secure: true,
             sameSite: 'none',
-            domain:'scanfeast-backend.onrender.com',   //'qrmenuscan-backend.onrender.com', // Match your backend domain
+            domain:'localhost',   //'qrmenuscan-backend.onrender.com', // Match your backend domain
+            // domain: 'scanfeast-backend.onrender.com',
             maxAge: 2 * 24 * 60 * 60 * 1000,
         });
 
